@@ -1,6 +1,9 @@
 'use strict';
+//sort默认按asc码排列的
 var rank_asc = function(collection){
-  return [6,5,4,3,2];
+  var result = collection.sort();
+  var result = result.reverse();
+  return result;
 };
 
 module.exports = rank_asc;
