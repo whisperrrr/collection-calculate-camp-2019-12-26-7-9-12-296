@@ -8,7 +8,6 @@ describe('compute_median', function () {
   var collection_c = [1, 4, 6, 2, 3, 10, 9, 8, 11, 20, 19, 30];
 
   it('计算给定奇数个数字的集合的中位数', function () {
-
     var result = compute_median(collection_a);
     expect(result).toEqual(1);
   });
