@@ -1,7 +1,15 @@
 'use strict';
 
 function compute_chain_median(collection) {
-  //在这里写入代码
+  var arrChain = collection.split("->");
+  var arrLength = arrChain.length;
+  arrChain = arrChain.sort();
+  if (arrLength % 2 === 0) {
+    return (arrChain[arrLength/2]+arrChain[arrLength/2-1])/2;
+  }
+  else {
+    return arrChain[(arrLength-1)/2];
+  }
 }
 
 module.exports = compute_chain_median;
