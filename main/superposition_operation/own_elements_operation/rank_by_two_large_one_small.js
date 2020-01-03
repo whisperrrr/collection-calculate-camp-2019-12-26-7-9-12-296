@@ -9,7 +9,12 @@ function rank_by_two_large_one_small(collection){
     arrPiece.push(arrPieceMin);
     result.push(arrPiece);
   }
-  return result.flat().concat(collection);
-
+  //return result.flat().concat(collection);
+  return flatten(result).concat(collection);
+}
+function flatten(arr) {
+  return arr.reduce((flat, toFlatten) => {
+    return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+  }, []);
 }
 module.exports = rank_by_two_large_one_small;
